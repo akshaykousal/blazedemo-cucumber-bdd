@@ -1,0 +1,8 @@
+com\blazedemo\bdd\stepDefinitions\StepDefinitionCommon.class
+com\blazedemo\bdd\stepDefinitions\PurchasePageStepDefinition.class
+com\blazedemo\bdd\stepDefinitions\WelcomePageStepDefinition.class
+com\blazedemo\bdd\stepDefinitions\ReservePageStepDefinition.class
+com\blazedemo\bdd\stepDefinitions\ConfirmationPageStepDefinition.class
+com\blazedemo\bdd\runner\Runner.class
+com\blazedemo\bdd\stepDefinitions\StepDefinition.class
+com\blazedemo\bdd\stepDefinitions\VacationPageStepDefinition.class

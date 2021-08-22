@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/reporting.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber-JVM Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber-JVM Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="feature-overview.html">Features</a></li>
+        <li role="presentation" ><a href="tag-overview.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="step-overview.html">Steps</a></li>
+        <li role="presentation" ><a href="failures-overview.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" id="build-info">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-1">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Project</th>
+                          <th>Number</th>
+                        <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="info">
+            <td>Blazedemo</td>
+                          <td>1</td>
+                        <td>21 Aug 2021, 23:28</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="report-lead" class="container-fluid>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2>Steps Statistics</h2>
+              <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+          </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="summary">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+              <table id="tablesorter" class="stats-table table-hover">
+
+          <thead>
+            <tr class="header">
+              <th>Implementation</th>
+              <th>Occurrences</th>
+              <th>Duration</th>
+              <th>Average</th>
+              <th>Ratio</th>
+            </tr>
+          </thead>
+
+          <tbody>
+                          <tr>
+                <td class="location">ConfirmationPageStepDefinition.user_is_navigated_to_reserve_screen()</td>
+                <td>2</td>
+                <td class="duration" data-value="24570200">024ms</td>
+                <td class="duration" data-value="12285100">012ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">ConfirmationPageStepDefinition.user_verifies_id_is_generated_successfully_on_confirmation_screen(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="10126604500">10s 126ms</td>
+                <td class="duration" data-value="10126604500">10s 126ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">ConfirmationPageStepDefinition.user_verifies_status_on_confirmation_screen(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="10209316600">10s 209ms</td>
+                <td class="duration" data-value="10209316600">10s 209ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">ConfirmationPageStepDefinition.user_verifies_text_on_confirmation_screen(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="47115700">047ms</td>
+                <td class="duration" data-value="47115700">047ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">PurchasePageStepDefinition.user_is_navigated_to_reserve_screen()</td>
+                <td>6</td>
+                <td class="duration" data-value="78049600">078ms</td>
+                <td class="duration" data-value="13008266">013ms</td>
+                <td class="failed">83.33%</td>
+              </tr>
+                          <tr>
+                <td class="location">PurchasePageStepDefinition.user_purchase_flight_by_entering_details_as(DataTable)</td>
+                <td>2</td>
+                <td class="duration" data-value="26918371200">26s 918ms</td>
+                <td class="duration" data-value="13459185600">13s 459ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">PurchasePageStepDefinition.user_verifies_text_on_purchase_screen(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="42114900">042ms</td>
+                <td class="duration" data-value="42114900">042ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">ReservePageStepDefinition.user_chooses_flight_having_airline_and_depart_time_details_as(DataTable)</td>
+                <td>1</td>
+                <td class="duration" data-value="10855101900">10s 855ms</td>
+                <td class="duration" data-value="10855101900">10s 855ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">ReservePageStepDefinition.user_chooses_flight_number(String)</td>
+                <td>5</td>
+                <td class="duration" data-value="53557188500">53s 557ms</td>
+                <td class="duration" data-value="10711437700">10s 711ms</td>
+                <td class="failed">80.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">ReservePageStepDefinition.user_is_navigated_to_reserve_screen()</td>
+                <td>8</td>
+                <td class="duration" data-value="77825600">077ms</td>
+                <td class="duration" data-value="9728200">009ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">ReservePageStepDefinition.user_verifies_flights_from_to_text_is_displayed_on_reserve_screen(String,String)</td>
+                <td>2</td>
+                <td class="duration" data-value="102689100">102ms</td>
+                <td class="duration" data-value="51344550">051ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitionCommon.afterEachScenario()</td>
+                <td>10</td>
+                <td class="duration" data-value="356315100">356ms</td>
+                <td class="duration" data-value="35631510">035ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitionCommon.beforeEachScenario(Scenario)</td>
+                <td>10</td>
+                <td class="duration" data-value="3250284000">3s 250ms</td>
+                <td class="duration" data-value="325028400">325ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitionCommon.user_launches_application()</td>
+                <td>10</td>
+                <td class="duration" data-value="6900956500">6s 900ms</td>
+                <td class="duration" data-value="690095650">690ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">VacationPageStepDefinition.user_is_navigated_to_vacation_screen()</td>
+                <td>2</td>
+                <td class="duration" data-value="9303900">009ms</td>
+                <td class="duration" data-value="4651950">004ms</td>
+                <td class="failed">50.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">VacationPageStepDefinition.user_verifies_image_is_displayed_on_vacation_screen(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="56153900">056ms</td>
+                <td class="duration" data-value="56153900">056ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">VacationPageStepDefinition.user_verifies_text_is_displayed_on_vacation_screen(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="50076400">050ms</td>
+                <td class="duration" data-value="50076400">050ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">WelcomePageStepDefinition.user_clicks_find_flights_button()</td>
+                <td>1</td>
+                <td class="duration" data-value="879361000">879ms</td>
+                <td class="duration" data-value="879361000">879ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">WelcomePageStepDefinition.user_clicks_on_link_on_welcome_screen(String)</td>
+                <td>2</td>
+                <td class="duration" data-value="1640775100">1s 640ms</td>
+                <td class="duration" data-value="820387550">820ms</td>
+                <td class="failed">50.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">WelcomePageStepDefinition.user_finds_flights_from_departure_city_to_destination_city(String,String)</td>
+                <td>7</td>
+                <td class="duration" data-value="22114092300">22s 114ms</td>
+                <td class="duration" data-value="3159156042">3s 159ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">WelcomePageStepDefinition.user_selects_as_city(String,String)</td>
+                <td>2</td>
+                <td class="duration" data-value="2488615000">2s 488ms</td>
+                <td class="duration" data-value="1244307500">1s 244ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">WelcomePageStepDefinition.user_verifies_welcome_message_as(String)</td>
+                <td>2</td>
+                <td class="duration" data-value="155050800">155ms</td>
+                <td class="duration" data-value="77525400">077ms</td>
+                <td class="failed">50.00%</td>
+              </tr>
+                      </tbody>
+
+          <tfoot class="total">
+            <tr>
+              <td>22</td>
+              <td>78</td>
+              <td class="duration">2m 29s 939ms</td>
+              <td class="duration">1s 922ms</td>
+              <td>Totals</td>
+            </tr>
+          </tfoot>
+
+        </table>
+          </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

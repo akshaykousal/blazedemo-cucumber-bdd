@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: com.blazedemo.bdd.runner.Runner
+-------------------------------------------------------------------------------
+Tests run: 68, Failures: 4, Errors: 0, Skipped: 3, Time elapsed: 150.848 sec <<< FAILURE! - in com.blazedemo.bdd.runner.Runner
+When User verifies welcome message as INCORRECT WELCOME MESSAGE!(Scenario: Verify Welcome Message)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: Expected Message : INCORRECT WELCOME MESSAGE!Actual Message : Welcome to the Simple Travel Agency!
+
+Scenario: Verify Welcome Message  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: Expected Message : INCORRECT WELCOME MESSAGE!Actual Message : Welcome to the Simple Travel Agency!
+
+And User chooses flight number INCORRECT NUMBER(Scenario: Choose Flight)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: Flight with Flight number as INCORRECT NUMBER NOT found on the screen
+
+Scenario: Choose Flight  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: Flight with Flight number as INCORRECT NUMBER NOT found on the screen
+
